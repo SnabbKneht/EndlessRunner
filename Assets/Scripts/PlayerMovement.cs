@@ -22,10 +22,18 @@ public class PlayerMovement : MonoBehaviour
 
     public float GravityValue => gravityValue;
     [SerializeField] private float gravityValue = -9.81f;
+
+    private AudioClip JumpSound => jumpSound;
+    [SerializeField] private AudioClip jumpSound;
+
+    private float JumpSoundVolume => jumpSoundVolume;
+    [SerializeField] private float jumpSoundVolume;
     
     // cached references
 
-    public CharacterController Controller { get; private set; }
+    private CharacterController Controller { get; set; }
+
+    private AudioSource AudioSourceReference { get; set; }
     
     // properties
 
@@ -33,13 +41,14 @@ public class PlayerMovement : MonoBehaviour
     
     private float CurrentVerticalVelocity { get; set; }
     
-    private bool IsGrounded { get; set; }
+    public bool IsGrounded { get; private set; }
     
     // ==========
 
     private void Start()
     {
         Controller = GetComponent<CharacterController>();
+        AudioSourceReference = GetComponent<AudioSource>();
         CurrentLane = Lane.Middle;
     }
     
@@ -76,6 +85,7 @@ public class PlayerMovement : MonoBehaviour
         if(!context.performed) return;
         if(!IsGrounded) return;
         CurrentVerticalVelocity = Mathf.Sqrt(JumpHeight * -2f * gravityValue);
+        AudioSourceReference.PlayOneShot(JumpSound, JumpSoundVolume);
     }
 
     public void OnMoveLeft(InputAction.CallbackContext context)
