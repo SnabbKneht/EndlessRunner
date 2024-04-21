@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Gameplay : MonoBehaviour
 {
@@ -10,14 +9,11 @@ public class Gameplay : MonoBehaviour
     
     public static Gameplay Instance { get; set; }
     
-    // config parameters
-
-    public string GameSceneName => gameSceneName;
-    [SerializeField] private string gameSceneName;
-    
     // cached references
     
     public GameObject Player { get; private set; }
+    
+    private SceneLoader SceneLoaderReference { get; set; }
     
     // properties
     
@@ -37,6 +33,7 @@ public class Gameplay : MonoBehaviour
         }
 
         Player = GameObject.FindWithTag("Player");
+        SceneLoaderReference = FindObjectOfType<SceneLoader>();
     }
 
     private void Update()
@@ -46,16 +43,11 @@ public class Gameplay : MonoBehaviour
 
     private void OnEnable()
     {
-        EventManager.OnGameOver += FinishGame;
+        EventManager.OnGameOver += SceneLoaderReference.StartGame;
     }
 
     private void OnDisable()
     {
-        EventManager.OnGameOver -= FinishGame;
-    }
-
-    private void FinishGame()
-    {
-        SceneManager.LoadScene(GameSceneName);
+        EventManager.OnGameOver -= SceneLoaderReference.StartGame;
     }
 }
