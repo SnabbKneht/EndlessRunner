@@ -34,6 +34,8 @@ public class PlayerMovement : MonoBehaviour
     private CharacterController Controller { get; set; }
 
     private AudioSource AudioSourceReference { get; set; }
+
+    private Animator AnimatorReference { get; set; }
     
     // properties
 
@@ -49,6 +51,7 @@ public class PlayerMovement : MonoBehaviour
     {
         Controller = GetComponent<CharacterController>();
         AudioSourceReference = GetComponent<AudioSource>();
+        AnimatorReference = GetComponentInChildren<Animator>();
         CurrentLane = Lane.Middle;
     }
     
@@ -56,6 +59,9 @@ public class PlayerMovement : MonoBehaviour
     {
         UpdateIsGrounded();
         HandleMovement();
+        
+        // AnimatorReference.SetFloat("VerticalVelocity", CurrentVerticalVelocity);
+        AnimatorReference.SetBool("IsGrounded", IsGrounded);
     }
 
     private void HandleMovement()
@@ -86,6 +92,7 @@ public class PlayerMovement : MonoBehaviour
         if(!IsGrounded) return;
         CurrentVerticalVelocity = Mathf.Sqrt(JumpHeight * -2f * gravityValue);
         AudioSourceReference.PlayOneShot(JumpSound, JumpSoundVolume);
+        AnimatorReference.SetTrigger("Jump");
     }
 
     public void OnMoveLeft(InputAction.CallbackContext context)
