@@ -18,6 +18,8 @@ public class Gameplay : MonoBehaviour
     // properties
     
     public int CurrentScore { get; private set; }
+    
+    public bool IsGamePaused { get; private set; }
 
     // ==========
     
@@ -49,5 +51,29 @@ public class Gameplay : MonoBehaviour
     private void OnDisable()
     {
         EventManager.OnGameOver -= SceneLoaderReference.StartGame;
+    }
+
+    public void SwitchGamePause()
+    {
+        if(IsGamePaused)
+        {
+            ResumeGame();
+        }
+        else
+        {
+            PauseGame();
+        }
+    }
+    
+    private void PauseGame()
+    {
+        Time.timeScale = 0f;
+        IsGamePaused = true;
+    }
+
+    private void ResumeGame()
+    {
+        Time.timeScale = 1f;
+        IsGamePaused = false;
     }
 }

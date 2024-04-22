@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.Serialization;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -10,6 +9,9 @@ public class PlayerMovement : MonoBehaviour
     
     public float MovementSpeed => movementSpeed;
     [SerializeField] private float movementSpeed;
+
+    public float HorizontalMovementSpeed => horizontalMovementSpeed;
+    [SerializeField] private float horizontalMovementSpeed;
 
     public float JumpHeight => jumpHeight;
     [SerializeField] private float jumpHeight;
@@ -45,6 +47,8 @@ public class PlayerMovement : MonoBehaviour
     
     public bool IsGrounded { get; private set; }
     
+    private float TargetHorizontalCoord { get; set; }
+    
     // ==========
 
     private void Start()
@@ -53,6 +57,7 @@ public class PlayerMovement : MonoBehaviour
         AudioSourceReference = GetComponent<AudioSource>();
         AnimatorReference = GetComponentInChildren<Animator>();
         CurrentLane = Lane.Middle;
+        TargetHorizontalCoord = 0f;
     }
     
     private void Update()
@@ -60,7 +65,6 @@ public class PlayerMovement : MonoBehaviour
         UpdateIsGrounded();
         HandleMovement();
         
-        // AnimatorReference.SetFloat("VerticalVelocity", CurrentVerticalVelocity);
         AnimatorReference.SetBool("IsGrounded", IsGrounded);
     }
 
@@ -75,6 +79,18 @@ public class PlayerMovement : MonoBehaviour
 
         CurrentVerticalVelocity += gravityValue * Time.deltaTime;
         Controller.Move(Time.deltaTime * CurrentVerticalVelocity * Vector3.up);
+        
+        HandleHorizontalPosition();
+    }
+
+    private void HandleHorizontalPosition()
+    {
+        if(Mathf.Approximately(transform.position.x, TargetHorizontalCoord)) return;
+        float moveDirection = Mathf.Sign(TargetHorizontalCoord - transform.position.x);
+        float moveX = moveDirection * HorizontalMovementSpeed * Time.deltaTime;
+        
+        var moveVector = new Vector3(moveX, 0f, 0f);
+        Controller.Move(moveVector);
     }
 
     private void UpdateIsGrounded()
@@ -99,7 +115,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if(!context.performed) return;
         if(CurrentLane == Lane.Left) return;
-        Controller.Move(Vector3.left * Config.Instance.LaneWidth);
+        TargetHorizontalCoord -= Config.Instance.LaneWidth;
         CurrentLane--;
     }
 
@@ -107,7 +123,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if(!context.performed) return;
         if(CurrentLane == Lane.Right) return;
-        Controller.Move(Vector3.right * Config.Instance.LaneWidth);
+        TargetHorizontalCoord += Config.Instance.LaneWidth;
         CurrentLane++;
     }
 }
