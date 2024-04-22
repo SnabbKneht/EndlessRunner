@@ -88,6 +88,11 @@ public class PlayerMovement : MonoBehaviour
         if(Mathf.Approximately(transform.position.x, TargetHorizontalCoord)) return;
         float moveDirection = Mathf.Sign(TargetHorizontalCoord - transform.position.x);
         float moveX = moveDirection * HorizontalMovementSpeed * Time.deltaTime;
+
+        if(Mathf.Abs(moveX) > Mathf.Abs(TargetHorizontalCoord - transform.position.x))
+        {
+            moveX = TargetHorizontalCoord - transform.position.x;
+        }
         
         var moveVector = new Vector3(moveX, 0f, 0f);
         Controller.Move(moveVector);
