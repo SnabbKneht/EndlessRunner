@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Gameplay : MonoBehaviour
 {
@@ -14,6 +15,9 @@ public class Gameplay : MonoBehaviour
     public GameObject Player { get; private set; }
     
     private SceneLoader SceneLoaderReference { get; set; }
+
+    private PauseMenuUI PauseMenu => pauseMenu;
+    [SerializeField] private PauseMenuUI pauseMenu;
     
     // properties
     
@@ -46,15 +50,21 @@ public class Gameplay : MonoBehaviour
     private void OnEnable()
     {
         EventManager.OnGameOver += SceneLoaderReference.StartGame;
+        EventManager.OnGamePaused += PauseMenu.Show;
+        EventManager.OnGameResumed += PauseMenu.Hide;
     }
 
     private void OnDisable()
     {
         EventManager.OnGameOver -= SceneLoaderReference.StartGame;
+        EventManager.OnGamePaused -= PauseMenu.Show;
+        EventManager.OnGameResumed -= PauseMenu.Hide;
     }
 
-    public void SwitchGamePause()
+    public void OnSwitchGamePause(InputAction.CallbackContext context)
     {
+        if(!context.performed) return;
+        
         if(IsGamePaused)
         {
             ResumeGame();
@@ -65,15 +75,17 @@ public class Gameplay : MonoBehaviour
         }
     }
     
-    private void PauseGame()
+    public void PauseGame()
     {
         Time.timeScale = 0f;
         IsGamePaused = true;
+        EventManager.Instance.RaiseOnGamePaused();
     }
 
-    private void ResumeGame()
+    public void ResumeGame()
     {
         Time.timeScale = 1f;
         IsGamePaused = false;
+        EventManager.Instance.RaiseOnGameResumed();
     }
 }

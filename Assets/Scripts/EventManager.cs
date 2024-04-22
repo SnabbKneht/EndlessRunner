@@ -8,6 +8,10 @@ public class EventManager : MonoBehaviour
     public static EventManager Instance { get; private set; }
 
     public static event Action OnGameOver;
+
+    public static event Action OnGamePaused;
+
+    public static event Action OnGameResumed;
     
     private void Awake()
     {
@@ -24,5 +28,15 @@ public class EventManager : MonoBehaviour
     public void RaiseOnGameOver()
     {
         OnGameOver?.Invoke();
+    }
+
+    public void RaiseOnGamePaused()
+    {
+        OnGamePaused?.Invoke();
+    }
+
+    public void RaiseOnGameResumed()
+    {
+        OnGameResumed?.Invoke();
     }
 }

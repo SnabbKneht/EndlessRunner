@@ -14,6 +14,9 @@ public class SceneLoader : MonoBehaviour
     public string GameSceneName => gameSceneName;
     [SerializeField] private string gameSceneName;
     
+    public string MenuSceneName => menuSceneName;
+    [SerializeField] private string menuSceneName;
+    
     // ==========
     
     private void Awake()
@@ -36,5 +39,10 @@ public class SceneLoader : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    public void LoadMenu()
+    {
+        SceneManager.LoadScene(MenuSceneName);
     }
 }
