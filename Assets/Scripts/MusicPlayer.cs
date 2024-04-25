@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
 
 public class MusicPlayer : MonoBehaviour
 {
@@ -11,17 +12,20 @@ public class MusicPlayer : MonoBehaviour
     
     // config parameters
 
-    private AudioClip IntroClip => introClip;
-    [SerializeField] private AudioClip introClip;
+    private AssetReferenceAudioClip IntroClipAsset => introClipAsset;
+    [SerializeField] private AssetReferenceAudioClip introClipAsset;
 
-    private AudioClip LoopClip => loopClip;
-    [SerializeField] private AudioClip loopClip;
+    private AssetReferenceAudioClip LoopClipAsset => loopClipAsset;
+    [SerializeField] private AssetReferenceAudioClip loopClipAsset;
     
     // cached references
     
     private AudioSource IntroSource { get; set; }
     
     private AudioSource LoopSource { get; set; }
+    
+    // event
+    private event Action OnAssetsLoaded;
     
     // ==========
 
@@ -42,12 +46,30 @@ public class MusicPlayer : MonoBehaviour
 
     private void Start()
     {
-        IntroSource.clip = IntroClip;
         IntroSource.loop = false;
-        IntroSource.Play();
-        
-        LoopSource.clip = LoopClip;
         LoopSource.loop = true;
-        LoopSource.PlayDelayed(IntroClip.length);
+        
+        OnAssetsLoaded += Play;
+        LoadAssets();
+    }
+
+    private void Play()
+    {
+        IntroSource.Play();
+        LoopSource.PlayDelayed(IntroSource.clip.length);
+    }
+    
+    private void LoadAssets()
+    {
+        IntroClipAsset.LoadAssetAsync().Completed += handle =>
+        {
+            IntroSource.clip = handle.Result;
+            if(LoopSource.clip) OnAssetsLoaded?.Invoke();
+        };
+        LoopClipAsset.LoadAssetAsync().Completed += handle =>
+        {
+            LoopSource.clip = handle.Result;
+            if(IntroSource.clip) OnAssetsLoaded?.Invoke();
+        };
     }
 }

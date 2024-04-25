@@ -175,6 +175,14 @@ PrefabInstance:
       propertyPath: introClip
       value: 
       objectReference: {fileID: 8300000, guid: 9cfbb7396e6d09e40b604b59549833b9, type: 3}
+    - target: {fileID: 2303438852944652253, guid: 73277f57063bed84fa0afb56d67fdf14, type: 3}
+      propertyPath: loopClipAsset.m_AssetGUID
+      value: 0ea94809615b445438db644f0ce85578
+      objectReference: {fileID: 0}
+    - target: {fileID: 2303438852944652253, guid: 73277f57063bed84fa0afb56d67fdf14, type: 3}
+      propertyPath: introClipAsset.m_AssetGUID
+      value: 9cfbb7396e6d09e40b604b59549833b9
+      objectReference: {fileID: 0}
     - target: {fileID: 7789487521827120957, guid: 73277f57063bed84fa0afb56d67fdf14, type: 3}
       propertyPath: m_Name
       value: MusicPlayer

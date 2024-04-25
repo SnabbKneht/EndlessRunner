@@ -44,5 +44,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24584215948329141988a5761daf8ac4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  introClip: {fileID: 8300000, guid: 9cfbb7396e6d09e40b604b59549833b9, type: 3}
-  loopClip: {fileID: 8300000, guid: 0ea94809615b445438db644f0ce85578, type: 3}
+  introClipAsset:
+    m_AssetGUID: 1f11a0afcb6e1ec408e415ff8804a674
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  loopClipAsset:
+    m_AssetGUID: b3590e9bff8dc3345bce7178b8fa7b0d
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
