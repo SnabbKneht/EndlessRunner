@@ -3,6 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+/// <summary>
+/// This class handles all events.
+/// </summary>
 public class EventManager : MonoBehaviour
 {
     public static EventManager Instance { get; private set; }

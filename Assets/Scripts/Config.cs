@@ -1,6 +1,9 @@
 using System;
 using UnityEngine;
 
+/// <summary>
+/// This class handles the game configuration.
+/// </summary>
 public class Config : MonoBehaviour
 {
     public static Config Instance { get; private set; }

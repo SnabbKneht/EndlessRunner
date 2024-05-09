@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: BLINK.Tools
+  commentId: N:BLINK.Tools
+  id: BLINK.Tools
+  children:
+  - BLINK.Tools.MaterialTilingOffset
+  langs:
+  - csharp
+  - vb
+  name: BLINK.Tools
+  nameWithType: BLINK.Tools
+  fullName: BLINK.Tools
+  type: Namespace
+  assemblies:
+  - Assembly-CSharp-Editor
+references:
+- uid: BLINK.Tools.MaterialTilingOffset
+  commentId: T:BLINK.Tools.MaterialTilingOffset
+  href: BLINK.Tools.MaterialTilingOffset.html
+  name: MaterialTilingOffset
+  nameWithType: MaterialTilingOffset
+  fullName: BLINK.Tools.MaterialTilingOffset

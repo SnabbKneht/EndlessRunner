@@ -1,0 +1,21 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: BLINK.Tools
+  name: BLINK.Tools
+  href: api/BLINK.Tools.html
+  commentId: N:BLINK.Tools
+  fullName: BLINK.Tools
+  nameWithType: BLINK.Tools
+- uid: BLINK.Tools.MaterialTilingOffset
+  name: MaterialTilingOffset
+  href: api/BLINK.Tools.MaterialTilingOffset.html
+  commentId: T:BLINK.Tools.MaterialTilingOffset
+  fullName: BLINK.Tools.MaterialTilingOffset
+  nameWithType: MaterialTilingOffset
+- uid: BLINK.Tools.MaterialTilingOffset.gameObjectList
+  name: gameObjectList
+  href: api/BLINK.Tools.MaterialTilingOffset.html#BLINK_Tools_MaterialTilingOffset_gameObjectList
+  commentId: F:BLINK.Tools.MaterialTilingOffset.gameObjectList
+  fullName: BLINK.Tools.MaterialTilingOffset.gameObjectList
+  nameWithType: MaterialTilingOffset.gameObjectList

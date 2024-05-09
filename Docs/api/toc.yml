@@ -1,0 +1,8 @@
+### YamlMime:TableOfContent
+items:
+- uid: BLINK.Tools
+  name: BLINK.Tools
+  items:
+  - uid: BLINK.Tools.MaterialTilingOffset
+    name: MaterialTilingOffset
+memberLayout: SamePage

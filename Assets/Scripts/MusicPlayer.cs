@@ -7,7 +7,9 @@ using UnityEngine.AddressableAssets;
 public class MusicPlayer : MonoBehaviour
 {
     // singleton
-    
+    /// <summary>
+    /// This class handles music playing.
+    /// </summary>
     public static MusicPlayer Instance { get; private set; }
     
     // config parameters

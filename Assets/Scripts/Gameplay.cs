@@ -7,7 +7,9 @@ using UnityEngine.InputSystem;
 public class Gameplay : MonoBehaviour
 {
     // singleton
-    
+    /// <summary>
+    /// This class handles gameplay-related things.
+    /// </summary>
     public static Gameplay Instance { get; set; }
     
     // cached references
