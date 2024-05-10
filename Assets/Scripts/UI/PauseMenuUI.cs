@@ -1,17 +1,17 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class PauseMenuUI : MonoBehaviour
+namespace UI
 {
-    public void Show()
+    public class PauseMenuUI : MonoBehaviour
     {
-        gameObject.SetActive(true);
-    }
+        public void Show()
+        {
+            gameObject.SetActive(true);
+        }
 
-    public void Hide()
-    {
-        gameObject.SetActive(false);
+        public void Hide()
+        {
+            gameObject.SetActive(false);
+        }
     }
 }

@@ -1,22 +1,22 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class ScoreUI : MonoBehaviour
+namespace UI
 {
-    // cached references
-
-    private TextMeshProUGUI Text { get; set; }
-
-    private void Start()
+    public class ScoreUI : MonoBehaviour
     {
-        Text = GetComponent<TextMeshProUGUI>();
-    }
+        // cached references
 
-    private void Update()
-    {
-        Text.text = Gameplay.Instance.CurrentScore.ToString();
+        private TextMeshProUGUI Text { get; set; }
+
+        private void Start()
+        {
+            Text = GetComponent<TextMeshProUGUI>();
+        }
+
+        private void Update()
+        {
+            Text.text = Gameplay.Instance.CurrentScore.ToString();
+        }
     }
 }

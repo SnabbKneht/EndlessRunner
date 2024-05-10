@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: MyNamespace
+  commentId: N:MyNamespace
+  id: MyNamespace
+  children:
+  - MyNamespace.MusicPlayer
+  langs:
+  - csharp
+  - vb
+  name: MyNamespace
+  nameWithType: MyNamespace
+  fullName: MyNamespace
+  type: Namespace
+  assemblies:
+  - Assembly-CSharp
+references:
+- uid: MyNamespace.MusicPlayer
+  commentId: T:MyNamespace.MusicPlayer
+  parent: MyNamespace
+  href: MyNamespace.MusicPlayer.html
+  name: MusicPlayer
+  nameWithType: MusicPlayer
+  fullName: MyNamespace.MusicPlayer
+- uid: MyNamespace
+  commentId: N:MyNamespace
+  href: MyNamespace.html
+  name: MyNamespace
+  nameWithType: MyNamespace
+  fullName: MyNamespace

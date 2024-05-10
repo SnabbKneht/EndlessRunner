@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: UI
+  commentId: N:UI
+  id: UI
+  children:
+  - UI.PauseMenuUI
+  - UI.ScoreUI
+  langs:
+  - csharp
+  - vb
+  name: UI
+  nameWithType: UI
+  fullName: UI
+  type: Namespace
+  assemblies:
+  - Assembly-CSharp
+references:
+- uid: UI.ScoreUI
+  commentId: T:UI.ScoreUI
+  href: UI.ScoreUI.html
+  name: ScoreUI
+  nameWithType: ScoreUI
+  fullName: UI.ScoreUI
+- uid: UI.PauseMenuUI
+  commentId: T:UI.PauseMenuUI
+  href: UI.PauseMenuUI.html
+  name: PauseMenuUI
+  nameWithType: PauseMenuUI
+  fullName: UI.PauseMenuUI

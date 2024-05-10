@@ -1,5 +1,10 @@
 {
-  "BLINK.Tools": "BLINK.Tools.yml",
-  "BLINK.Tools.MaterialTilingOffset": "BLINK.Tools.MaterialTilingOffset.yml",
-  "BLINK.Tools.MaterialTilingOffset.gameObjectList": "BLINK.Tools.MaterialTilingOffset.yml"
+  "MyNamespace": "MyNamespace.yml",
+  "MyNamespace.MusicPlayer": "MyNamespace.MusicPlayer.yml",
+  "MyNamespace.MusicPlayer.Instance": "MyNamespace.MusicPlayer.yml",
+  "UI": "UI.yml",
+  "UI.PauseMenuUI": "UI.PauseMenuUI.yml",
+  "UI.PauseMenuUI.Hide": "UI.PauseMenuUI.yml",
+  "UI.PauseMenuUI.Show": "UI.PauseMenuUI.yml",
+  "UI.ScoreUI": "UI.ScoreUI.yml"
 }

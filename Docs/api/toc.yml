@@ -1,8 +1,15 @@
 ### YamlMime:TableOfContent
 items:
-- uid: BLINK.Tools
-  name: BLINK.Tools
+- uid: MyNamespace
+  name: MyNamespace
   items:
-  - uid: BLINK.Tools.MaterialTilingOffset
-    name: MaterialTilingOffset
+  - uid: MyNamespace.MusicPlayer
+    name: MusicPlayer
+- uid: UI
+  name: UI
+  items:
+  - uid: UI.PauseMenuUI
+    name: PauseMenuUI
+  - uid: UI.ScoreUI
+    name: ScoreUI
 memberLayout: SamePage

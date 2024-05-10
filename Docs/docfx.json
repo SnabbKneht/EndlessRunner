@@ -2,12 +2,12 @@
   "metadata": [
     {
       "src": [
-        {
-          "src": "..",
-          "files": [
-            "**/*.csproj", "**/*.cs",
-          ]
-        }
+		{
+		  "src": "..",
+		  "files": [
+		    "Assembly-CSharp.csproj"
+		  ]
+		}
       ],
       "dest": "api"
     }
@@ -36,8 +36,8 @@
       "modern"
     ],
     "globalMetadata": {
-      "_appName": "EndlessRunnerDocs",
-      "_appTitle": "EndlessRunnerDocs",
+      "_appName": "mysite",
+      "_appTitle": "mysite",
       "_enableSearch": true,
       "pdf": true
     }
