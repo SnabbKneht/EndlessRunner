@@ -16,7 +16,7 @@ namespace UI
 
         private void Update()
         {
-            Text.text = Gameplay.Instance.CurrentScore.ToString();
+            Text.text = Gameplay.Gameplay.Instance.CurrentScore.ToString();
         }
     }
 }

@@ -1,0 +1,37 @@
+### YamlMime:ManagedReference
+items:
+- uid: Audio
+  commentId: N:Audio
+  id: Audio
+  children:
+  - Audio.FootstepsSoundPlayer
+  - Audio.MusicPlayer
+  langs:
+  - csharp
+  - vb
+  name: Audio
+  nameWithType: Audio
+  fullName: Audio
+  type: Namespace
+  assemblies:
+  - Assembly-CSharp
+references:
+- uid: Audio.MusicPlayer
+  commentId: T:Audio.MusicPlayer
+  parent: Audio
+  href: Audio.MusicPlayer.html
+  name: MusicPlayer
+  nameWithType: MusicPlayer
+  fullName: Audio.MusicPlayer
+- uid: Audio.FootstepsSoundPlayer
+  commentId: T:Audio.FootstepsSoundPlayer
+  href: Audio.FootstepsSoundPlayer.html
+  name: FootstepsSoundPlayer
+  nameWithType: FootstepsSoundPlayer
+  fullName: Audio.FootstepsSoundPlayer
+- uid: Audio
+  commentId: N:Audio
+  href: Audio.html
+  name: Audio
+  nameWithType: Audio
+  fullName: Audio

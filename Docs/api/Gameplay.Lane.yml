@@ -1,0 +1,123 @@
+### YamlMime:ManagedReference
+items:
+- uid: Gameplay.Lane
+  commentId: T:Gameplay.Lane
+  id: Lane
+  parent: Gameplay
+  children:
+  - Gameplay.Lane.Left
+  - Gameplay.Lane.Middle
+  - Gameplay.Lane.Right
+  langs:
+  - csharp
+  - vb
+  name: Lane
+  nameWithType: Lane
+  fullName: Gameplay.Lane
+  type: Enum
+  source:
+    remote:
+      path: Assets/Scripts/Gameplay/Lane.cs
+      branch: Docs
+      repo: https://github.com/SnabbKneht/EndlessRunner.git
+    id: Lane
+    path: ../Assets/Scripts/Gameplay/Lane.cs
+    startLine: 2
+  assemblies:
+  - Assembly-CSharp
+  namespace: Gameplay
+  syntax:
+    content: public enum Lane
+    content.vb: Public Enum Lane
+- uid: Gameplay.Lane.Left
+  commentId: F:Gameplay.Lane.Left
+  id: Left
+  parent: Gameplay.Lane
+  langs:
+  - csharp
+  - vb
+  name: Left
+  nameWithType: Lane.Left
+  fullName: Gameplay.Lane.Left
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Gameplay/Lane.cs
+      branch: Docs
+      repo: https://github.com/SnabbKneht/EndlessRunner.git
+    id: Left
+    path: ../Assets/Scripts/Gameplay/Lane.cs
+    startLine: 4
+  assemblies:
+  - Assembly-CSharp
+  namespace: Gameplay
+  syntax:
+    content: Left = 0
+    return:
+      type: Gameplay.Lane
+- uid: Gameplay.Lane.Middle
+  commentId: F:Gameplay.Lane.Middle
+  id: Middle
+  parent: Gameplay.Lane
+  langs:
+  - csharp
+  - vb
+  name: Middle
+  nameWithType: Lane.Middle
+  fullName: Gameplay.Lane.Middle
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Gameplay/Lane.cs
+      branch: Docs
+      repo: https://github.com/SnabbKneht/EndlessRunner.git
+    id: Middle
+    path: ../Assets/Scripts/Gameplay/Lane.cs
+    startLine: 5
+  assemblies:
+  - Assembly-CSharp
+  namespace: Gameplay
+  syntax:
+    content: Middle = 1
+    return:
+      type: Gameplay.Lane
+- uid: Gameplay.Lane.Right
+  commentId: F:Gameplay.Lane.Right
+  id: Right
+  parent: Gameplay.Lane
+  langs:
+  - csharp
+  - vb
+  name: Right
+  nameWithType: Lane.Right
+  fullName: Gameplay.Lane.Right
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Gameplay/Lane.cs
+      branch: Docs
+      repo: https://github.com/SnabbKneht/EndlessRunner.git
+    id: Right
+    path: ../Assets/Scripts/Gameplay/Lane.cs
+    startLine: 6
+  assemblies:
+  - Assembly-CSharp
+  namespace: Gameplay
+  syntax:
+    content: Right = 2
+    return:
+      type: Gameplay.Lane
+references:
+- uid: Gameplay
+  commentId: N:Gameplay
+  href: Gameplay.html
+  name: Gameplay
+  nameWithType: Gameplay
+  fullName: Gameplay
+- uid: Gameplay.Lane
+  commentId: T:Gameplay.Lane
+  parent: Gameplay
+  href: Gameplay.Lane.html
+  name: Lane
+  nameWithType: Lane
+  fullName: Gameplay.Lane

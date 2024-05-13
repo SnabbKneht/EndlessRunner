@@ -12,6 +12,56 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/AddressableAssets.AssetReferenceAudioClip.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AddressableAssets.AssetReferenceAudioClip.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AddressableAssets.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AddressableAssets.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Audio.FootstepsSoundPlayer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Audio.FootstepsSoundPlayer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Audio.MusicPlayer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Audio.MusicPlayer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Audio.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Audio.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/BLINK.Tools.MaterialTilingOffset.yml",
       "output": {
         ".html": {
@@ -26,6 +76,106 @@
       "output": {
         ".html": {
           "relative_path": "api/BLINK.Tools.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gameplay.Config.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gameplay.Config.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gameplay.EventManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gameplay.EventManager.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gameplay.Gameplay.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gameplay.Gameplay.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gameplay.Health.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gameplay.Health.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gameplay.HurtingObject.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gameplay.HurtingObject.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gameplay.Lane.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gameplay.Lane.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gameplay.PathGenerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gameplay.PathGenerator.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gameplay.PlayerMovement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gameplay.PlayerMovement.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gameplay.SceneLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gameplay.SceneLoader.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gameplay.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gameplay.html"
         }
       },
       "version": ""

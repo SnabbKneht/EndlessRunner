@@ -1,7 +1,8 @@
 using System;
+using AddressableAssets;
 using UnityEngine;
 
-namespace MyNamespace
+namespace Audio
 {
     /// <summary>
     /// This class handles music playing.

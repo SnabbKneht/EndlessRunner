@@ -1,10 +1,38 @@
 ### YamlMime:TableOfContent
 items:
-- uid: MyNamespace
-  name: MyNamespace
+- uid: AddressableAssets
+  name: AddressableAssets
   items:
-  - uid: MyNamespace.MusicPlayer
+  - uid: AddressableAssets.AssetReferenceAudioClip
+    name: AssetReferenceAudioClip
+- uid: Audio
+  name: Audio
+  items:
+  - uid: Audio.FootstepsSoundPlayer
+    name: FootstepsSoundPlayer
+  - uid: Audio.MusicPlayer
     name: MusicPlayer
+- uid: Gameplay
+  name: Gameplay
+  items:
+  - uid: Gameplay.Config
+    name: Config
+  - uid: Gameplay.EventManager
+    name: EventManager
+  - uid: Gameplay.Gameplay
+    name: Gameplay
+  - uid: Gameplay.Health
+    name: Health
+  - uid: Gameplay.HurtingObject
+    name: HurtingObject
+  - uid: Gameplay.Lane
+    name: Lane
+  - uid: Gameplay.PathGenerator
+    name: PathGenerator
+  - uid: Gameplay.PlayerMovement
+    name: PlayerMovement
+  - uid: Gameplay.SceneLoader
+    name: SceneLoader
 - uid: UI
   name: UI
   items:

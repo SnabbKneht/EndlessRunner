@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: AddressableAssets
+  commentId: N:AddressableAssets
+  id: AddressableAssets
+  children:
+  - AddressableAssets.AssetReferenceAudioClip
+  langs:
+  - csharp
+  - vb
+  name: AddressableAssets
+  nameWithType: AddressableAssets
+  fullName: AddressableAssets
+  type: Namespace
+  assemblies:
+  - Assembly-CSharp
+references:
+- uid: AddressableAssets.AssetReferenceAudioClip
+  commentId: T:AddressableAssets.AssetReferenceAudioClip
+  href: AddressableAssets.AssetReferenceAudioClip.html
+  name: AssetReferenceAudioClip
+  nameWithType: AssetReferenceAudioClip
+  fullName: AddressableAssets.AssetReferenceAudioClip
